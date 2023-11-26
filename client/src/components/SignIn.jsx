@@ -30,13 +30,15 @@ export default function SignIn() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:3001/login",{email,password})
-    .then(result=>{console.log(result)
-      if (result.data.status === "Success") {
-        navigate("/");
-      }
-    })
-    .catch(err=>console.log(err))
+    axios
+      .post("https://signupandloginapp.onrender.com/login", { email, password })
+      .then((result) => {
+        console.log(result);
+        if (result.data.status === "Success") {
+          navigate("/");
+        }
+      })
+      .catch((err) => console.log(err));
     setEmail("");
     setPassword("");
   

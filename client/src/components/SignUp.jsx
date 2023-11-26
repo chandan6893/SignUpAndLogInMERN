@@ -35,10 +35,18 @@ export default function SignUp() {
       return
     }
     event.preventDefault();
-    axios.post("http://localhost:3001/register",{firstName,lastName,email,password})
-    .then(result=>{console.log(result);
-      navigate("/login")})
-    .catch(err=>console.log(err));
+    axios
+      .post("https://signupandloginapp.onrender.com/register", {
+        firstName,
+        lastName,
+        email,
+        password,
+      })
+      .then((result) => {
+        console.log(result);
+        navigate("/login");
+      })
+      .catch((err) => console.log(err));
 
 
 
