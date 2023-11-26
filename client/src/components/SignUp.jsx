@@ -12,6 +12,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -149,9 +151,10 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-start">
               <Grid item>
-                <Link href="/login" variant="body2">
+                {/* <Link href="/login" variant="body2">
                   Already have an account? Sign in
-                </Link>
+                </Link> */}
+                <Button onClick={()=>navigate("/login")}>Already have an account? Sign in</Button>
               </Grid>
             </Grid>
           </Box>
